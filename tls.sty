@@ -1,0 +1,60 @@
+% TLS TeX style file, created Feb 7 2023. 
+% Last modified: Feb 8 2023
+
+% Typography packages 
+\RequirePackage[otfmath,scaled=.98,sups,osf]{XCharter} % sets all the fonts
+\newcommand\liningfont{\addfontfeature{Numbers=Lining}}
+\setmonofont[Scale=1.04]{inconsolata} % monospaced font
+
+% Set page dimensions and margins
+\RequirePackage{geometry}
+\geometry{paper=a4paper, top=1in, bottom=1in, left=1.5in, right=1.5in, includefoot}
+
+% Headings typography
+\RequirePackage{titlesec}
+\titleformat{\section}
+  {\Large\bfseries}{\liningfont\thesection}{1em}{\liningfont}
+\titleformat{\subsection}
+  {\large\bfseries}{\liningfont\thesubsection}{1em}{\liningfont}
+\titleformat{\subsubsection}
+  {\normalsize\bfseries}{\liningfont\thesubsubsection}{1em}{\liningfont}
+  
+
+% Default language is English
+\RequirePackage{polyglossia}
+% \setdefaultlanguage{english}
+\setdefaultlanguage{italian}
+
+% Bibliography setup
+% \RequirePackage[backend=biber,style=apa,sorting=nyt,dashed=False]{biblatex}
+% \addbibresource{references.bib}
+\RequirePackage{natbib}
+\bibliographystyle{apa}
+
+% Set line spacing to 1.04 times font size
+\RequirePackage{setspace}
+\setstretch{1.04}
+
+% Removes indentation at beginning of paragraphs
+\RequirePackage{parskip}
+
+\RequirePackage{booktabs} % Adds toprule, midrule, bottomrule and other tabular macros for making pleasing tables
+
+% Allows for custom placement of figures with [H] option
+\RequirePackage{float}
+
+% Required for inserting pictures
+\RequirePackage{graphicx}
+
+% Modifies appearance of links. Blue color is color of links on Wikipedia
+\RequirePackage{hyperref} 
+\RequirePackage{xcolor}
+\definecolor{linkblue}{HTML}{3366cc}
+\hypersetup{colorlinks=true, citecolor=linkblue, linkcolor=linkblue, urlcolor=linkblue}
+
+% Packages for IPA symbols,trees, and glosses
+\RequirePackage{tikz}
+\RequirePackage{tikz-qtree}
+\RequirePackage{gb4e}
+\RequirePackage{tipa} % TIPA uses Charis SIL which is based on Charter
+
